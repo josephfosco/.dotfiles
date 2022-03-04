@@ -6,6 +6,9 @@
 (setq live-disable-zone t)
 ;; Load bindings config
 (live-load-config-file "bindings.el")
+;; do not save undo-tree history to a file
+(setq undo-tree-autosave-history nil)
+
 
 (set-face-attribute 'default nil :height 100)
 ;;(set-frame-size (selected-frame) 120 46)
@@ -47,15 +50,15 @@
   (push-mark)
   (goto-char (point-min)))
 
-(live-add-pack-lib "ac-cider")
-(require 'ac-cider)
-(add-hook 'cider-mode-hook 'ac-flyspell-workaround)
-(add-hook 'cider-mode-hook 'ac-cider-setup)
-(add-hook 'cider-repl-mode-hook 'ac-cider-setup)
-(eval-after-load "auto-complete"
-  '(progn
-     (add-to-list 'ac-modes 'cider-mode)
-     (add-to-list 'ac-modes 'cider-repl-mode)))
+;; (live-add-pack-lib "ac-cider")
+;; (require 'ac-cider)
+;; (add-hook 'cider-mode-hook 'ac-flyspell-workaround)
+;; (add-hook 'cider-mode-hook 'ac-cider-setup)
+;; (add-hook 'cider-repl-mode-hook 'ac-cider-setup)
+;; (eval-after-load "auto-complete"
+;;   '(progn
+;;      (add-to-list 'ac-modes 'cider-mode)
+;;      (add-to-list 'ac-modes 'cider-repl-mode)))
 
 ;; handle tmux's xterm-keys
 ;; put the following line in your ~/.tmux.conf:
