@@ -7,7 +7,7 @@
 ;; Load bindings config
 (live-load-config-file "bindings.el")
 ;; do not save undo-tree history to a file
-(setq undo-tree-autosave-history nil)
+(setq undo-tree-auto-save-history nil)
 
 
 (set-face-attribute 'default nil :height 100)

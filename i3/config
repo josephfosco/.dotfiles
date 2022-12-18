@@ -30,7 +30,9 @@ font pango:monospace 8
 floating_modifier $mod
 
 # Sets the window border for new windows
-new_window 1pixel
+# new_window 1pixel # deprecated
+default_border pixel 1
+default_floating_border pixel 1
 
 # start a terminal
 #bindsym $mod+Return exec env TERM=xterm-256color xterm
